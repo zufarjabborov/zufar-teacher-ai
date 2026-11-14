@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>Zufar Teacher AI</title>
+<style>
+:root{--bg:#080808;--panel:#121212;--panel2:#181818;--line:#292929;--gold:#f3c45c;--gold2:#d99b27;--muted:#a7a7a7;--white:#f6f4ef;--green:#5bd47a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#2a1c08 0,transparent 35%),var(--bg);color:var(--white);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:24px 22px 100px}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}
+.brand{display:flex;align-items:center;gap:14px}.logo{width:54px;height:54px;border:1.5px solid var(--gold);border-radius:15px;display:grid;place-items:center;color:var(--gold);font-weight:900;font-size:23px;box-shadow:0 0 22px #d99b2733}
+.brand h1{font-size:clamp(17px,3vw,25px);letter-spacing:.04em;margin:0}.brand h1 span{color:var(--gold)}.brand p{margin:1px 0 0;color:var(--muted);font-size:13px}
+.actions{display:flex;gap:9px}.circle{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#151515;color:white;font-size:18px}
+.hero{position:relative;overflow:hidden;border:1px solid #6b5226;border-radius:24px;padding:30px;background:linear-gradient(110deg,#151515 0%,#111 55%,#38260c 100%);display:grid;grid-template-columns:1.3fr .7fr;gap:20px;min-height:250px;align-items:center;box-shadow:inset 0 0 45px #e0a52b12}
+.hero h2{font-size:clamp(25px,4vw,42px);line-height:1.13;margin:0 0 16px;max-width:650px}.hero h2 span{color:var(--gold)}.hero ul{list-style:none;padding:0;margin:0 0 20px;color:#d0d0d0}.hero li{margin:7px 0}.hero li:before{content:"✓";color:var(--gold);font-weight:800;margin-right:10px}
+.btn{border:0;border-radius:30px;background:linear-gradient(120deg,#ffdf86,#d99b27);padding:12px 20px;color:#17120a;font-weight:800;font-size:14px;cursor:pointer}.hero-art{font-size:100px;text-align:center;filter:drop-shadow(0 0 25px #e6ad3d66)}.hero-art small{display:block;font-size:13px;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:20px 0}.metric,.tile,.section{border:1px solid var(--line);background:linear-gradient(145deg,#171717,#0e0e0e);border-radius:19px;padding:18px}.metric .ico{font-size:24px;color:var(--gold)}.metric label{display:block;color:var(--muted);font-size:13px}.metric strong{font-size:25px;display:block;margin-top:4px}.metric em{font-style:normal;color:var(--green);font-size:12px}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.tile{display:flex;align-items:center;gap:15px;text-align:left;color:var(--white);cursor:pointer;transition:.2s}.tile:hover,.tile.active{border-color:var(--gold);box-shadow:0 0 22px #e6ad3d1c}.tile .ico{width:58px;height:58px;border-radius:16px;background:#3a2b12;color:var(--gold);display:grid;place-items:center;font-size:27px;flex:none}.tile b{display:block;font-size:17px}.tile small{color:var(--muted);font-size:13px}.arrow{margin-left:auto;color:var(--gold);font-size:22px}
+.section{margin-top:20px;display:none}.section.show{display:block}.section h3{margin:0 0 5px;font-size:20px}.section p{margin:0 0 14px;color:var(--muted)}textarea,input,select{width:100%;background:#090909;border:1px solid #343434;border-radius:12px;padding:13px;color:white;font:inherit;margin:7px 0 12px}textarea{min-height:100px;resize:vertical}.result{white-space:pre-wrap;border:1px dashed #6b5226;border-radius:12px;padding:14px;color:#eee;min-height:55px;margin-top:12px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#101010ee;border-top:1px solid #292929;backdrop-filter:blur(14px);display:flex;justify-content:center;gap:0;padding:8px 8px calc(8px + env(safe-area-inset-bottom));z-index:5}.bottom button{background:none;border:0;color:#aaa;padding:7px 13px;font-size:12px;min-width:65px;cursor:pointer}.bottom button span{display:block;font-size:20px}.bottom button.active{color:var(--gold)}
+.note{font-size:12px;color:#898989;margin-top:20px;text-align:center}
+@media(max-width:700px){.wrap{padding:17px 14px 100px}.hero{grid-template-columns:1fr;padding:22px;min-height:0}.hero-art{display:none}.metrics{grid-template-columns:repeat(2,1fr);gap:9px}.metric{padding:14px}.metric strong{font-size:22px}.tiles{grid-template-columns:1fr}.tile{padding:14px}.actions{display:none}.brand p{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="logo">ZT</div><div><h1>ZUFAR TEACHER <span>AI</span></h1><p>Instagram boshqaruv tizimi · @zufar_teacher</p></div></div>
+ <div class="actions"><button class="circle" aria-label="Bildirishnomalar">♧</button><button class="circle" aria-label="Profil">♙</button></div>
+</header>
+<section class="hero">
+ <div><h2>Instagram biznesingizni <span>AI bilan boshqaring</span></h2>
+ <ul><li>Direct va izohlar uchun avtomatlashtirish</li><li>Kontent g‘oyalari va tayyor postlar</li><li>Profil faoliyatini tahlil qilish</li></ul>
+ <button class="btn" onclick="showPanel('content')">✦ Kontent yaratish</button></div>
+ <div class="hero-art">◎<small>AI POWERED</small></div>
+</section>
+<div class="metrics">
+ <div class="metric"><div class="ico">♙</div><label>Obunachilar</label><strong>—</strong><em>Instagram ulangach</em></div>
+ <div class="metric"><div class="ico">♡</div><label>Jalb etish</label><strong>—</strong><em>Statistika ulanmagan</em></div>
+ <div class="metric"><div class="ico">▤</div><label>Xabarlar</label><strong>—</strong><em>Direct ulanmagan</em></div>
+ <div class="metric"><div class="ico">▥</div><label>Ko‘rishlar</label><strong>—</strong><em>Ma’lumot kutilmoqda</em></div>
+</div>
+<div class="tiles">
+ <button class="tile" onclick="showPanel('direct')"><span class="ico">▢</span><span><b>Direct AI</b><small>Mijozlarga avtomatik javob</small></span><span class="arrow">›</span></button>
+ <button class="tile" onclick="showPanel('comments')"><span class="ico">☷</span><span><b>Izohlar AI</b><small>Kommentariyalarga javob</small></span><span class="arrow">›</span></button>
+ <button class="tile" onclick="showPanel('content')"><span class="ico">▣</span><span><b>Kontent AI</b><small>Post va Reels g‘oyalari</small></span><span class="arrow">›</span></button>
+ <button class="tile" onclick="showPanel('calendar')"><span class="ico">▦</span><span><b>Reja va jadval</b><small>Kontent rejalashtirish</small></span><span class="arrow">›</span></button>
+ <button class="tile" onclick="showPanel('stats')"><span class="ico">▥</span><span><b>Statistika</b><small>O‘sish va samaradorlik</small></span><span class="arrow">›</span></button>
+ <button class="tile" onclick="showPanel('settings')"><span class="ico">⚙</span><span><b>Sozlamalar</b><small>Instagram va AI ulanishi</small></span><span class="arrow">›</span></button>
+</div>
+<section class="section" id="direct"><h3>Direct AI</h3><p>Instagram Direct API ulanmaguncha xabarlar bu yerda ko‘rinmaydi.</p><button class="btn" onclick="showPanel('settings')">Instagram ulanishini sozlash</button></section>
+<section class="section" id="comments"><h3>Izohlar AI</h3><p>Kommentariyalarga javob berish Meta ruxsatlari va webhook sozlangach yoqiladi.</p><button class="btn" onclick="showPanel('settings')">Ulanishni sozlash</button></section>
+<section class="section" id="content"><h3>Kontent AI</h3><p>Hozircha namuna matn generatori. Haqiqiy AI javoblari OpenAI API ulangach ishlaydi.</p><label for="topic">Post yoki Reels mavzusi</label><input id="topic" placeholder="Masalan: Rus tilini 30 kunda o‘rganish"><label for="kind">Kontent turi</label><select id="kind"><option>Instagram Reels ssenariysi</option><option>Instagram posti</option><option>Story matni</option><option>Reklama matni</option></select><button class="btn" onclick="demoGenerate()">Namuna yaratish</button><div class="result" id="result">Mavzuni kiriting va “Namuna yaratish” tugmasini bosing.</div></section>
+<section class="section" id="calendar"><h3>Reja va jadval</h3><p>Kontent taqvimi keyingi bosqichda qo‘shiladi. Hozircha Instagramga avtomatik joylash yoqilmagan.</p></section>
+<section class="section" id="stats"><h3>Statistika</h3><p>Instagram Insights ruxsatlari ulangach, haqiqiy ko‘rsatkichlar shu yerda chiqadi.</p></section>
+<section class="section" id="settings"><h3>Ulanish va sozlamalar</h3><p><b>Instagram:</b> @zufar_teacher · Professional akkaunt</p><p><b>Holat:</b> Meta API hali ulanmagan</p><p><b>AI:</b> OpenAI API hali ulanmagan</p><p>API kalitlarini faqat Vercel Environment Variables bo‘limida saqlang. Ularni bu sahifaga yoki ommaviy GitHub kodiga yozmang.</p></section>
+<p class="note">Zufar Teacher AI · Boshqaruv paneli prototipi. Instagram va OpenAI integratsiyalari hali sozlanmoqda.</p>
+</div>
+<nav class="bottom">
+ <button class="active" onclick="showPanel('home',this)"><span>⌂</span>Bosh sahifa</button>
+ <button onclick="showPanel('direct',this)"><span>▢</span>Xabarlar</button>
+ <button onclick="showPanel('content',this)"><span>＋</span>Kontent</button>
+ <button onclick="showPanel('stats',this)"><span>▥</span>Statistika</button>
+ <button onclick="showPanel('settings',this)"><span>⚙</span>Sozlamalar</button>
+</nav>
+<script>
+function showPanel(id,btn){document.querySelectorAll('.section').forEach(x=>x.classList.remove('show'));if(id!=='home'){const el=document.getElementById(id);if(el)el.classList.add('show');}document.querySelectorAll('.bottom button').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');else{const map={direct:1,content:2,stats:3,settings:4};const n=map[id];if(n!==undefined)document.querySelectorAll('.bottom button')[n].classList.add('active');}if(id!=='home')document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function demoGenerate(){const t=document.getElementById('topic').value.trim();const k=document.getElementById('kind').value;const out=document.getElementById('result');if(!t){out.textContent='Iltimos, avval mavzuni kiriting.';return;}out.textContent='NAMUNA — '+k+'\\n\\n'+t+'\\n\\nRus tilini o‘rganish — yangi imkoniyatlar sari qadam! 🇷🇺\\nBugun kichik qadam tashlang, ertaga natijasini ko‘rasiz.\\n\\n📩 Batafsil ma’lumot uchun Direct’ga yozing.\\n\\n#RusTili #TilO‘rganish #ZufarTeacher\\n\\nEslatma: bu hozircha demo matn. Haqiqiy AI generatsiyasi API ulangach ishlaydi.';}
+</script>
+</body></html>
